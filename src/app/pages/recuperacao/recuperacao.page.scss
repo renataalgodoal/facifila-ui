@@ -1,0 +1,57 @@
+
+ion-content {
+  --ion-background-color: #f4f4f4;
+  //--background: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)),
+  //url('../../../assets/img/hc-curitiba.jpg') no-repeat center center / cover;
+
+}
+
+
+h1 {
+  padding: 10px 0px;
+  width: 100%;
+  font-size: 150%;
+  color: #e67e22;
+
+}
+
+h2 {
+  float: left;
+  color: #9f9f9f;
+  text-align: justify;
+  font-size: 20px;
+  font-weight: 200;
+  width: 100%;
+}
+
+form {
+  width: 100%;
+}
+
+ion-item {
+  font-size: 20px;
+  padding-top: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  --highlight-color-focused: none;
+  --highlight-color: #9f9f9f;
+  --color: #9f9f9f;
+  border-bottom: 1px solid #9f9f9f;
+}
+
+.btn {
+  padding-top: 80px;
+}
+
+ion-icon {
+  font-size: 30px;
+  padding-right: 10px;
+  vertical-align: middle;
+
+}
+
+ion-button {
+  float: right;
+
+}
+

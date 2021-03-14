@@ -1,0 +1,50 @@
+h1 {
+  color: #e67e22;
+}
+
+ion-content {
+  --background: #f4f4f4;
+  height: 100%;
+}
+
+.tabela {
+  background-color: white;
+  color: #6c6c6c;
+  float: left;
+  width: 100%;
+  border: 1px solid #dadada;
+  margin-top: 20px;
+
+}
+
+th {
+  // padding-right: 50px;
+  border: 1px solid #dadada;
+  height: 50px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+td {
+  text-align: left;
+  border: 1px solid #dadada;
+  padding-left: 10px;
+  height: 30px;
+}
+
+.first {
+  width: 15%;
+}
+
+.second {
+  width:70%;
+}
+
+.third {
+  width: 15%;
+}
+
+.padrao {
+  width: 800px;
+  height: 400px;
+}

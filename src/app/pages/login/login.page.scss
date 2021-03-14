@@ -1,0 +1,88 @@
+//----------------- HEADER E CONTENT -----------------//
+
+
+ion-content {
+  --background: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),
+  url('../../../assets/img/hc-curitiba.jpg') no-repeat center center / cover;
+}
+
+ion-toolbar {
+  --background: white;
+}
+
+
+//---------------- FORMS------------------------------//
+
+.login-form {
+  width: 500px;
+  height: 400px;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background-color: white;
+}
+
+
+// ------------------- BOTOES ---------------------//
+
+.btn-esqueceu-senha:link,
+.btn-esqueceu-senha:visited {
+  text-decoration: none;
+  color: #e67e22;
+  border-bottom: 1px solid transparent;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-esqueceu-senha:hover,
+.btn-esqueceu-senha:active {
+  border-bottom: 1px solid #e67e22;
+  transition: border-bottom 0.5s;
+}
+
+
+ion-button {
+  margin-left: auto;
+  margin-right: auto;
+  width: 120px;
+
+}
+
+.buttons {
+  margin: 10px 10%;
+  float: right;
+  font-size: 100%;
+  padding-top: 30px;
+}
+
+.btn-toolbar {
+  text-decoration: none;
+  margin-left: 20px;
+  color: rgb(138, 19, 39);
+  box-sizing: border-box;
+}
+
+.btn-toolbar:link,
+.btn-toolbar:visited {
+  border-bottom: 1px solid transparent;
+}
+
+.btn-toolbar:hover,
+.btn-toolbar:active {
+  border-bottom: 1px solid rgb(138, 19, 39);
+  transition: border-bottom 0.5s;
+}
+
+
+ion-icon {
+  padding-right: 5px;
+}
+
+ion-item {
+  --background: white;
+}
+

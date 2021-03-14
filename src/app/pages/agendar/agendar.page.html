@@ -1,0 +1,86 @@
+<ion-content [formGroup]="form" *ngIf="pagina == 1">
+    <div class="padrao">
+        <div class="row">
+            <h1><strong>Agendamento de exames</strong></h1>
+            <a href="http://localhost:4200/home" class="menu">
+                <ion-icon name="menu"></ion-icon>
+            </a>
+        </div>
+        <ion-item lines="none">
+            <ion-label class="label">O exame requer jejum?</ion-label>
+        </ion-item>
+        <ion-segment formControlName="needsFast">
+            <ion-segment-button value="1">
+                <ion-label>Sim</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="0">
+                <ion-label>Não</ion-label>
+            </ion-segment-button>
+        </ion-segment>
+        <div *ngIf="needsFast()">
+            <ion-item lines="none">
+                <ion-label class="label">Quanto tempo de jejum?</ion-label>
+            </ion-item>
+            <ion-segment formControlName="fastTime">
+                <ion-segment-button value="8">
+                    <ion-label>8h</ion-label>
+                </ion-segment-button>
+                <ion-segment-button value="12">
+                    <ion-label>12h</ion-label>
+                </ion-segment-button>
+            </ion-segment>
+        </div>
+    </div>
+    <ion-button (click)="forward()" class="teste">Próximo</ion-button>
+</ion-content>
+
+
+<ion-content [formGroup]="form" *ngIf="pagina === 2">
+    <div class="padrao">
+        <div class="row">
+            <h1><strong>Agendamento de exames</strong></h1>
+        </div>
+        <ion-item lines="none">
+            <ion-label class="label">Selecione a data desejada</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-datetime formControlName="date" displayFormat="DD/MM/YYYY" min="2020-09-27"
+                          placeholder="dd/mm/aaaa"></ion-datetime>
+        </ion-item>
+        <ion-button (click)="back()">Voltar</ion-button>
+    </div>
+    <ion-button (click)="forward()" class="teste">Próximo</ion-button>
+</ion-content>
+
+
+<ion-content [formGroup]="form" *ngIf="pagina === 3">
+    <div class="padrao">
+        <div class="row">
+            <h1><strong>Agendamento de exames</strong></h1>
+        </div>
+        <ion-item lines="none">
+            <ion-label class="label">Selecione o horário desejado</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-select formControlName="time" placeholder="Horários disponíveis">
+                <ion-select-option
+                                   *ngFor="let horario of horarios">{{horario}}</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-button (click)="back()">Voltar</ion-button>
+    </div>
+    <ion-button (click)="save()" class="teste">Concluir</ion-button>
+</ion-content>
+
+<ion-content [formGroup]="form" *ngIf="pagina === 4">
+    <div class="padrao">
+        <div class="row">
+            <h1><strong>Agendamento de exames</strong></h1>
+        </div>
+        <h2> Seu exame foi agendado com sucesso! Chegar com pelo menos 15 minutos de antecedência na data agendada e
+            levar o QR code gerado abaixo.</h2>
+        <qrcode [qrdata]=createdCode></qrcode>
+        <ion-button (click)="back()">Voltar</ion-button>
+    </div>
+    <a class="teste" (click)="goToHome()"> Ir para a página home</a>
+</ion-content>

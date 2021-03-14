@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar>
+        <img src="../../../assets/img/logo-chc.png" class="logo-chc">
+        <h1><strong> Hospital de Clinicas UFPR<br>
+            <span> Agendamento de exames labortatoriais</span></strong></h1>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="login-form">
+        <h2>Administrador </h2>
+        <form method="post" [formGroup]="form">
+            <ion-item lines="none">
+                <ion-label>CPF:</ion-label>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-input type="text" name="cpf" placeholder="Insira seu cpf" class="inputs" formControlName="user"></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-label>Senha:</ion-label>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-input type="password" name="senha" placeholder="Insira sua senha" class="inputs" formControlName="password"></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-button type="submit" (click)="login()"><strong>Entrar</strong></ion-button>
+            </ion-item>
+        </form>
+    </div>
+</ion-content>

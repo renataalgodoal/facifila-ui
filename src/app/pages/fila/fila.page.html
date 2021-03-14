@@ -1,0 +1,21 @@
+<ion-content>
+<div class="padrao">
+    <div class="row">
+        <h1>Fila eletrônica</h1>
+    </div>
+    <table class="tabela">
+        <tr>
+            <th class="first">Posição</th>
+            <th class="second">Nome</th>
+            <th class="third">Hora</th>
+        </tr>
+        <tr *ngFor="let linha of line; index as i">
+            <td>{{i+1}}</td>
+            <td>
+                {{linha.user_profile.name}}
+            </td>
+            <td>{{linha.date}}</td>
+        </tr>
+    </table>
+</div>
+</ion-content>

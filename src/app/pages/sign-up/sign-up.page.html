@@ -1,0 +1,107 @@
+<ion-content [formGroup]="form" *ngIf="pagina == 1">
+    <div class="padrao">
+        <div class="row">
+            <h1><strong>Cadastro de pacientes</strong></h1>
+        </div>
+        <ion-item lines="none">
+            <ion-label class="label">Nome:</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-input formControlName="name" placeholder="Insira seu nome completo"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-label class="label">Data de nascimento:</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-input formControlName="birthDate" placeholder="dd/mm/aaaa"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-label class="label">CPF:</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-input formControlName="legalId" placeholder="000.000.000-00"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-label class="label">Possui alguma deficiência?</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-segment formControlName="specialNeeds">
+                <ion-segment-button value="1">
+                    <ion-label>Sim</ion-label>
+                </ion-segment-button>
+                <ion-segment-button value="0">
+                    <ion-label>Não</ion-label>
+                </ion-segment-button>
+            </ion-segment>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-label class="label">Sexo:</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-segment formControlName="gender">
+                <ion-segment-button value="female">
+                    <ion-label>Feminino</ion-label>
+                </ion-segment-button>
+                <ion-segment-button value="male">
+                    <ion-label>Masculino</ion-label>
+                </ion-segment-button>
+            </ion-segment>
+        </ion-item>
+        <ion-item *ngIf="gender()" lines="none">
+            <ion-label class="label">Está grávida?</ion-label>
+        </ion-item>
+        <ion-item *ngIf="gender()" lines="none">
+            <ion-segment formControlName="isPregnant">
+                <ion-segment-button value="1">
+                    <ion-label>Sim</ion-label>
+                </ion-segment-button>
+                <ion-segment-button value="0">
+                    <ion-label>Não</ion-label>
+                </ion-segment-button>
+            </ion-segment>
+        </ion-item>
+    </div>
+    <ion-button class="teste" (click)="forward()">Próximo</ion-button>
+</ion-content>
+
+<ion-content [formGroup]="form" *ngIf="pagina == 2">
+    <div class="padrao">
+        <div class="row">
+            <h1><strong>Cadastro de pacientes</strong></h1>
+        </div>
+        <ion-item lines="none">
+            <ion-label class="label">Email:</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-input formControlName="mail"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-label class="label">Escolha uma senha:</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-input formControlName="password" type="password"
+                       placeholder="Senha de no mínimo 8 dígitos "></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-label class="label">Repita sua senha:</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-input formControlName="passwordConfirm" type="password"
+                       placeholder="Senha de no mínimo 8 dígitos"></ion-input>
+        </ion-item>
+        <ion-button (click)="back()">Voltar</ion-button>
+    </div>
+    <ion-button class="teste" (click)="save()">Concluir</ion-button>
+</ion-content>
+
+<ion-content *ngIf="pagina == 3">
+    <div class="padrao">
+        <div class="row">
+            <h1><strong>Cadastro de pacientes</strong></h1>
+        </div>
+        <h2> Seu cadastro foi concluído com sucesso! Para realizar seus agendamentos, realize o login.</h2>
+    </div>
+    <ion-button class="teste" (click)="goToLogin()"> Ir para a página de Login</ion-button>
+</ion-content>
+
+

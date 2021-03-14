@@ -1,0 +1,49 @@
+
+ion-content {
+  --background: #f4f4f4;
+}
+
+
+h1 {
+  color: #e67e22;
+  padding-bottom: 50px;
+}
+
+h2 {
+  float: left;
+  color: #9f9f9f;
+  text-align: justify;
+  font-size: 20px;
+  font-weight: 200;
+  width: 100%;
+}
+
+ion-item {
+  width: 100%;
+  //font-size: 20px;
+}
+
+ion-button {
+  float: left;
+}
+
+ion-datetime {
+  color: #0870f2;
+}
+
+ion-select {
+  --placeholder-color: #0870f2;
+  --placeholder-opacity: 1;
+}
+
+.label {
+  color: #6c6c6c;
+  font-size: 120%;
+}
+
+.row {
+  width: 100%;
+}
+
+
+

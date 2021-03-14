@@ -1,0 +1,13 @@
+<ion-content>
+    <div class="box">
+        <p><strong *ngIf="profile && profile.name">
+            <ion-icon name="person"></ion-icon>
+            Olá! {{profile.name}} </strong></p>
+    </div>
+    <div class="links">
+        <a class="btn-opt" (click)="goToAgendar()">Agendar exame</a>
+        <a class="btn-opt" (click)="goToMeusDados()">Meus dados</a>
+        <a class="btn-opt" (click)="goToMeusAgendamentos()">Meus agendamentos</a>
+    </div>
+    <ion-button (click)="logout()">Sair</ion-button>
+</ion-content>

@@ -1,0 +1,86 @@
+<ion-content [formGroup]="form" *ngIf="pagina == 1">
+    <div class="padrao">
+        <a href="http://localhost:4200/home-admin" class="menu">
+            <ion-icon name="menu"></ion-icon>
+        </a>
+        <h1><strong> Definições para a grade horária </strong></h1>
+        <h2> Ajustar parâmetros para definir o número de horários disponíveis para o agendamento ou deixar o agendamento
+            livre </h2>
+        <ion-button class="first" (click)="forward2()">Agendamento livre</ion-button>
+        <ion-button class="second" (click)="forward()">Ajustar parâmetros</ion-button>
+    </div>
+
+</ion-content>
+
+<ion-content [formGroup]="form" *ngIf="pagina == 2">
+    <div class="padrao">
+        <div class="row">
+            <h1><strong>Alterar parâmetros</strong></h1>
+            <a href="http://localhost:4200/home" class="menu">
+                <ion-icon name="menu"></ion-icon>
+            </a>
+        </div>
+        <div>
+            <ion-item lines="none">
+                <ion-label class="label">Qual horário de início das atividades:</ion-label>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-datetime formControlName="activityStartTime" displayFormat="HH:mm" min="06:30"
+                              minuteValues="0,10,20,30,40,50" placeholder="hh:mm"></ion-datetime>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-label class="label">Qual o horário do término das atividades:</ion-label>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-datetime formControlName="activityEndTime" displayFormat="HH:mm" min="16:30"
+                              minuteValues="0,10,20,30,40,50" placeholder="hh:mm"></ion-datetime>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-label class="label">Quantos funcionários estão trabalhando?</ion-label>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-select formControlName="numberOfEmployees" placeholder="Selecione uma opção">
+                    <ion-select-option value="1">1</ion-select-option>
+                    <ion-select-option value="2">2</ion-select-option>
+                    <ion-select-option value="3">3</ion-select-option>
+                    <ion-select-option value="4">4</ion-select-option>
+                    <ion-select-option value="5">5</ion-select-option>
+                    <ion-select-option value="6">6</ion-select-option>
+                    <ion-select-option value="7">7</ion-select-option>
+                    <ion-select-option value="8">8</ion-select-option>
+                </ion-select>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-label class="label">Qual o tempo de um exame?</ion-label>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-select formControlName="examTime" placeholder="Selecione uma opção">
+                    <ion-select-option value="5">5 minutos</ion-select-option>
+                    <ion-select-option value="10">10 minutos</ion-select-option>
+                    <ion-select-option value="15">15 minutos</ion-select-option>
+                </ion-select>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-button (click)="back()">Voltar</ion-button>
+            </ion-item>
+        </div>
+    </div>
+    <ion-button class="teste" (click)="save()">Concluir</ion-button>
+</ion-content>
+
+<ion-content *ngIf="pagina==3">
+    <div class="padrao">
+        <h1><strong>Alterar parâmetros</strong></h1>
+        <h2>Todos os parâmetros foram definidos/alterados com sucesso!</h2>
+    </div>
+    <ion-button class="teste" (click)="goToHomeAdmin()"> Ir para a página home</ion-button>
+</ion-content>
+
+<ion-content *ngIf="pagina==4">
+    <div class="padrao">
+        <h1><strong>Agendamentos livre</strong></h1>
+        <h2>Não há limites para o número de agendamentos, todos os padrões anteriormente definidos, foram
+            desativados. </h2>
+    </div>
+    <ion-button class="teste" (click)="goToHomeAdmin()"> Ir para a página home</ion-button>
+</ion-content>

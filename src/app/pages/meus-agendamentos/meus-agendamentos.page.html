@@ -1,0 +1,52 @@
+<ion-content *ngIf="pagina==1">
+    <div class="padrao">
+        <div class="row">
+            <h1><strong>Meus Agendamentos</strong></h1>
+            <a href="http://localhost:4200/home" class="menu">
+                <ion-icon name="menu"></ion-icon>
+            </a>
+        </div>
+        <div class="form">
+            <table>
+                <tr>
+                    <th>Data</th>
+                    <th>Hora</th>
+                    <th>QR Code</th>
+                    <th>Cancelar</th>
+                </tr>
+                <tr *ngFor="let appointment of parsedAppointments">
+                    <td>
+                        {{appointment.date}}
+                    </td>
+                    <td>
+                        {{appointment.time}}
+                    </td>
+                    <td>
+                        <ion-button (click)="presentModal(appointment.uuid)">
+                            <ion-icon name="qr-code"></ion-icon>
+                        </ion-button>
+                    </td>
+                    <td>
+                        <ion-button (click)="delete(appointment.uuid)">
+                            <ion-icon name="trash"></ion-icon>
+                        </ion-button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</ion-content>
+
+<ion-content *ngIf="pagina==2">
+    <div class="padrao">
+        <div class="row">
+            <h1><strong>Meus Agendamentos</strong></h1>
+            <a href="http://localhost:4200/home" class="menu">
+                <ion-icon name="menu"></ion-icon>
+            </a>
+        </div>
+        <div class="form">
+            <h2>Você não possui nenhum exame agendado.</h2>
+        </div>
+    </div>
+</ion-content>

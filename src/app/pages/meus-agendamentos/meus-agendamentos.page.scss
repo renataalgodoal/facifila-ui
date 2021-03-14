@@ -1,0 +1,45 @@
+
+h1 {
+  padding: 10px 0px;
+  font-size: 150%;
+  color: #e67e22;
+}
+
+h2 {
+  float: left;
+  color: #9f9f9f;
+  text-align: justify;
+  font-size: 20px;
+  font-weight: 200;
+  width: 100%;
+}
+
+table {
+  color: #9f9f9f;
+  background-color: white;
+  width: 100%;
+  border: 1px solid #dadada;
+}
+
+table tr {
+  text-align: center;
+  height: 30px;
+  width: 100%;
+}
+
+table th,
+table td {
+  width: 25%;
+  border: 1px solid #dadada;
+}
+
+ion-button {
+  --background: white;
+  --color: #e67e22;
+  --color-hover: #3880ff;
+}
+
+.form {
+  padding-top: 40px;
+}
+

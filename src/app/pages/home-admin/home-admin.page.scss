@@ -1,0 +1,59 @@
+
+a:link,
+a:visited {
+  padding-bottom: 40px;
+  text-decoration: none;
+  color: white;
+  font-size: 120%;
+  float: left;
+  width: 100%;
+}
+
+a:hover,
+a:active {
+  color: #f0b37e;
+  transition: color 0.5s;
+}
+
+.box {
+  box-sizing: border-box;
+  border-bottom: 2px solid white;
+  width: 400px;
+}
+
+.links {
+  padding: 40px 20px;
+  box-sizing: border-box;
+  border-bottom: 2px solid white;
+  width: 400px;
+  height: 200px;
+}
+
+.btn-opt {
+  padding-bottom: 40px;
+  text-decoration: none;
+  color: white;
+  font-size: 120%;
+  float: left;
+  width: 100%;
+}
+
+p {
+  margin: 80px 20px 40px 20px;
+  font-size: 150%;
+  color: white;
+}
+
+
+ion-content {
+  --background: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),
+  url('../../../assets/img/hc-curitiba.jpg') no-repeat center center / cover;
+}
+
+ion-button {
+  margin-top: 20px;
+  width: 160px;
+  float: left;
+
+}
+

@@ -1,0 +1,42 @@
+<ion-content [formGroup]="form" *ngIf="pagina===1">
+    <div class="padrao">
+        <div class="row">
+            <h1><strong>Alterar dados</strong></h1>
+            <a href="http://localhost:4200/home-admin" class="menu">
+                <ion-icon name="menu"></ion-icon>
+            </a>
+        </div>
+        <div class="forms">
+            <ion-item lines="none">
+                <ion-label class="label">Senha atual:</ion-label>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-input type="password" formControlName="oldPassword"
+                           placeholder="Digite a senha do administrador"></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-label class="label">Nova senha:</ion-label>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-input type="password" formControlName="newPassword"
+                           placeholder="Senha de no mínimo 8 dígitos"></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-label class="label">Nova senha:</ion-label>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-input type="password" formControlName="newPassword2" placeholder="Repita a nova senha"></ion-input>
+            </ion-item>
+        </div>
+    </div>
+
+    <ion-button class="teste" (click)="forward()">Salvar alterações</ion-button>
+</ion-content>
+
+<ion-content *ngIf="pagina===2">
+    <div class="padrao">
+        <h1><strong>Alterar dados</strong></h1>
+        <h2> A senha do administrador foi alterada com sucesso!</h2>
+    </div>
+    <ion-button (click)="goToHomeAdmin()" class="teste">Voltar para a página home</ion-button>
+</ion-content>
